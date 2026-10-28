@@ -385,3 +385,5 @@ header.top .gate.gbtn:hover{color:#fff}
 @media (max-width:900px){.gatehead .gate{display:inline-flex}.gatehead .gate.gbtn{font-size:9.5px;letter-spacing:.08em;padding:7px 10px;white-space:normal;text-align:left;max-width:190px}.mgate .gate.gbtn{font-size:10px;letter-spacing:.1em}}
 .contact .ph-img{background:#E7E3D6;border-radius:0}
 .contact .ph-img img{object-fit:cover;border-radius:0}
+/* hidden must win over mobile table->block layout (10/28 tab filter fix) */
+[hidden]{display:none!important}

@@ -6,7 +6,15 @@
  function apply(){var t=(q&&q.value||'').toLowerCase(),n=0;
   rows.forEach(function(r){var ok=(cur==='all'||r.dataset.cat===cur)&&r.textContent.toLowerCase().indexOf(t)>-1;r.hidden=!ok;if(ok)n++;});
   var e=document.getElementById('docempty');if(e)e.hidden=n>0;}
- tabs.forEach(function(b){b.addEventListener('click',function(){cur=b.dataset.tab;tabs.forEach(function(x){x.setAttribute('aria-selected',x===b);});apply();});});
+ // default to Offering (no-JS fallback: HTML shows All)
+ function pick(b,focus){cur=b.dataset.tab;tabs.forEach(function(x){var on=x===b;x.setAttribute('aria-selected',on?'true':'false');x.tabIndex=on?0:-1;});apply();if(focus)b.focus();}
+ tabs.forEach(function(b,i){b.setAttribute('aria-controls','docrows');
+  b.addEventListener('click',function(){pick(b);});
+  b.addEventListener('keydown',function(e){var j=null,n=tabs.length;
+   if(e.key==='ArrowRight'||e.key==='ArrowDown')j=(i+1)%n;else if(e.key==='ArrowLeft'||e.key==='ArrowUp')j=(i-1+n)%n;else if(e.key==='Home')j=0;else if(e.key==='End')j=n-1;
+   if(j!==null){e.preventDefault();pick(tabs[j],true);}});});
+ var def=tabs.filter(function(b){return b.dataset.tab==='Offering';})[0]||tabs[0];
+ if(def)pick(def);
  if(q)q.addEventListener('input',apply);
  // locked documents dialog
  var d=document.getElementById('locked');
