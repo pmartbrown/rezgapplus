@@ -5,7 +5,7 @@
 <link rel="icon" href="/favicon.ico?v=6" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=6">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Rez Gap Plus LP"><meta property="og:title" content="Overview · Rez Gap Plus Fund I"><meta property="og:description" content="Rez Gap Plus LP · Fund I. Managed by Pinecone Capital, LLC, General Partner."><meta property="og:image" content="https://rezgapplus.com/img/og-share.png"><meta name="twitter:card" content="summary_large_image"><link rel="apple-touch-icon" href="/apple-touch-icon.png?v=6">
 <meta name="theme-color" content="#2C361E">
-<link rel="stylesheet" href="/fonts/fonts.css"><link rel="stylesheet" href="/rgp.css?v=8">
+<link rel="stylesheet" href="/fonts/fonts.css"><link rel="stylesheet" href="/rgp.css?v=9">
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
@@ -60,7 +60,7 @@
     <div class="expect">
      <div class="ex"><div class="cap">What you can expect · Reporting</div><h3>A letter every quarter</h3><p>Written by Paul, in plain English: what we saw, what we funded, what we're watching. Cadence and statement timing follow the offering documents.</p></div>
      <div class="ex"><div class="cap">What you can expect · Governance</div><h3>More than one set of eyes</h3><p>An investment committee, including members from outside the company, keeps control of the underwriting guidelines.<sup class="f"><a href="#fn5">5</a></sup></p></div>
-     <div class="ex"><div class="cap">What you can expect · Access</div><h3>A person, not a portal</h3><p>Investor relations answers by email and phone. Statements, tax forms and signing are in the InvestNext portal.</p></div>
+     <div class="ex"><div class="cap">What you can expect · Access</div><h3>A person, not a portal</h3><p>Investor relations answers by email. Statements, tax forms and signing are in the InvestNext portal.</p></div>
     </div>
    </div>
   </div>
@@ -132,14 +132,30 @@
 
  <section class="sec" id="contact">
   <div class="num">06 · Contact</div><h2>Talk to the person <em>who runs it.</em></h2>
-  <p class="sub">Write or call. You will hear back from Paul or investor relations, not an automated system.</p>
+  <p class="sub">Send us a note. You will hear back from Paul or investor relations, not an automated system.</p>
   <div class="contact">
    <div class="ph-img"><img src="/img/paul-brown.webp?v=2" alt="Paul Brown" width="600" height="600"></div>
    <div><h3>Paul Brown</h3><div class="t">Founder &amp; Managing Member · Pinecone Capital, LLC</div><p class="credit">Rez Gap Plus LP is managed by <a href="https://pineconegp.com" target="_blank" rel="noopener">Pinecone Capital, LLC</a>, General Partner. Servicer: <a href="https://realquickfunds.com" target="_blank" rel="noopener">Real Quick Funds</a>.</p><p>Paul brings decades of experience in financial services, including serving as international Chief Underwriting Officer for a Fortune 200 company, after an earlier career in engineering. He founded Real Quick Funds and Pinecone Capital, and sits on the fund's investment committee.</p>
-    <div class="btns"><a class="btn" href="mailto:Admin@PineconeGP.com?subject=Rez%20Gap%20Plus%20investor%20question">Email investor relations</a><a class="btn o" href="/rgp-ir.vcf" download>Save contact card</a></div></div>
-   <div class="kv"><div><span>Investor relations</span><a class="ul" href="mailto:Admin@PineconeGP.com">Admin@PineconeGP.com</a></div><div><span>Phone</span><a class="ul" href="tel:+18015987171">+1 (801) 598-7171</a></div><div><span>Office</span><span>1873 W Traverse Pkwy, E521<br>Lehi, UT 84048</span></div><div><span>Investor portal</span><span>InvestNext · <a class="ul" href="https://pineconecapital.investnext.com/portal/" target="_blank" rel="noopener" data-portal>Sign in <span aria-hidden="true">↗</span><span class="sr"> (opens the InvestNext investor portal in a new tab)</span></a></span></div></div>
+    <div class="btns"><button class="btn" type="button" id="ir-open" aria-haspopup="dialog" aria-controls="ir-dialog">Contact investor relations</button></div></div>
+   <div class="kv"><div><span>Investor relations</span><a class="ul" href="mailto:admin@pineconegp.com">admin@pineconegp.com</a></div><div><span>Office</span><span>1873 W Traverse Pkwy, E521<br>Lehi, UT 84048</span></div><div><span>Investor portal</span><span>InvestNext · <a class="ul" href="https://pineconecapital.investnext.com/portal/" target="_blank" rel="noopener" data-portal>Sign in <span aria-hidden="true">↗</span><span class="sr"> (opens the InvestNext investor portal in a new tab)</span></a></span></div></div>
   </div>
  </section>
+<dialog id="ir-dialog" class="irdlg" aria-labelledby="ir-h">
+ <form class="formcard" id="ir-form" novalidate data-endpoint="" data-to="admin@pineconegp.com">
+  <div class="irhead"><h3 id="ir-h">Contact investor relations</h3><button class="x" type="button" data-irclose aria-label="Close">×</button></div>
+  <p class="irsub">Your note goes to admin@pineconegp.com. Paul or investor relations will reply by email.</p>
+  <div class="irfields">
+   <label for="ir-name">Name <span class="req">(required)</span></label><input id="ir-name" name="name" autocomplete="name" required maxlength="120" aria-describedby="ir-name-e"><span class="ferr" id="ir-name-e" hidden>Please enter your name.</span>
+   <label for="ir-email">Email <span class="req">(required)</span></label><input id="ir-email" name="email" type="email" autocomplete="email" required maxlength="200" aria-describedby="ir-email-e"><span class="ferr" id="ir-email-e" hidden>Please enter a valid email address.</span>
+   <label for="ir-phone">Phone <span class="opt">(optional)</span></label><input id="ir-phone" name="phone" type="tel" autocomplete="tel" maxlength="40" aria-describedby="ir-phone-e"><span class="ferr" id="ir-phone-e" hidden>Please check the phone number.</span>
+   <label for="ir-msg">What would you like to discuss?</label><textarea id="ir-msg" name="message" maxlength="4000" rows="5"></textarea>
+   <div class="hp" aria-hidden="true"><label for="ir-company">Company website</label><input id="ir-company" name="company" tabindex="-1" autocomplete="off"></div>
+  </div>
+  <p class="irnote">Please don't include sensitive financial information. Requesting information does not make anyone eligible to invest.</p>
+  <div class="irrow"><button class="btn" type="submit" id="ir-send">Send</button><button class="btn o" type="button" data-irclose>Cancel</button></div>
+  <p class="irmsg" id="ir-status" role="status" aria-live="polite" hidden></p>
+ </form>
+</dialog>
 </main></div>
 <footer class="foot">
  <div><a class="lk" href="/"><img src="/logo/rgp-lockup-ondark.png" alt="Rez Gap Plus" width="1185" height="393"></a><p class="credit ft">Rez Gap Plus LP · Fund I<br>Managed by <a href="https://pineconegp.com" target="_blank" rel="noopener">Pinecone Capital, LLC</a>, General Partner<br>Servicer: <a href="https://realquickfunds.com" target="_blank" rel="noopener">Real Quick Funds</a></p><p class="credit ft">Paul Brown, Founder &amp; Managing Member, Pinecone Capital, LLC<br>1873 W Traverse Pkwy, E521<br>Lehi, UT 84048</p></div>
@@ -158,5 +174,5 @@
   <div class="erow"><button class="btn" id="entry-ok" type="button">I understand</button><a class="leave" href="https://www.google.com" rel="noopener">Leave site</a></div>
  </div>
 </div>
-<script src="/room.js?v=2"></script>
+<script src="/room.js?v=3"></script>
 </body></html>
