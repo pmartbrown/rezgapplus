@@ -371,3 +371,17 @@ aside.side .mkw p{font-size:15px}
 @media (max-width:1180px){.credit.hdr{display:none}}
 @media (max-width:900px){.brand .lockup{height:36px}.brand .fund{font-size:9px;letter-spacing:.14em}.hero h1.big{font-size:46px}.gatemain h1{font-size:44px}}
 @media (max-width:420px){.brand .fund{display:none}}
+/* 10/28: single sign-in button in header, skip link */
+.gate.gbtn{cursor:pointer;background:var(--white);color:var(--pine);border:1px solid var(--olive);padding:8px 14px;transition:background .15s,color .15s}
+.gate.gbtn:hover,.gate.gbtn:focus-visible{background:var(--olive);color:#fff;border-color:var(--olive)}
+.gate.gbtn:hover i,.gate.gbtn:focus-visible i{background:#D9DFC9}
+header.top .gate.gbtn{color:var(--pine)}
+header.top .gate.gbtn:hover{color:#fff}
+.gatehead .gate.gbtn{background:transparent}
+.gatehead .gate.gbtn:hover{background:var(--olive)}
+.gatebody{display:contents}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--pine);color:#fff;padding:10px 14px;font-size:13px;font-weight:600}
+.skip:focus{top:12px}
+@media (max-width:900px){.gatehead .gate{display:inline-flex}.gatehead .gate.gbtn{font-size:9.5px;letter-spacing:.08em;padding:7px 10px;white-space:normal;text-align:left;max-width:190px}.mgate .gate.gbtn{font-size:10px;letter-spacing:.1em}}
+.contact .ph-img{background:#E7E3D6;border-radius:0}
+.contact .ph-img img{object-fit:cover;border-radius:0}
