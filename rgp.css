@@ -407,3 +407,9 @@ dialog.irdlg{max-width:560px;max-height:calc(100dvh - 32px);overflow:auto}
 .irmsg.bad{border-left-color:#9A3B2B;background:#FBF3F0}
 .irmsg[hidden]{display:none}
 @media (max-width:520px){dialog.irdlg{width:calc(100% - 20px)}.irdlg .formcard{padding:18px 16px}.irhead h3{font-size:24px}}
+/* headline: Archivo (self-hosted), distinct from Pinecone's Cormorant serif */
+h1.hl{font-family:"Archivo",var(--sans);font-weight:800;font-stretch:112%;letter-spacing:-.03em;line-height:.96;color:var(--pine)}
+h1.hl em{display:block;font-style:normal;font-weight:300;color:var(--bark);letter-spacing:-.02em}
+.hero h1.hl.big{font-size:88px}
+.gatemain h1.hl{font-size:76px}
+@media (max-width:900px){.hero h1.hl.big{font-size:52px}.gatemain h1.hl{font-size:48px}}
