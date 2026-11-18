@@ -29,12 +29,6 @@
  // sign-in preview
  var si=document.getElementById('signin');
  if(si)si.addEventListener('submit',function(e){e.preventDefault();document.getElementById('si-msg').hidden=false;});
- // request access -> mailto (same pattern as pineconegp.com/investor-access)
- var f=document.getElementById('access-form');
- if(f)f.addEventListener('submit',function(e){e.preventDefault();if(!f.reportValidity())return;
-  var b='Name: '+f.name.value+'\nEmail: '+f.email.value+'\nPhone: '+(f.phone.value||'-')+'\n\nHow we know each other:\n'+f.relationship.value+'\n\n(Rez Gap Plus investor room request)';
-  window.location.href='mailto:Admin@PineconeGP.com?subject='+encodeURIComponent('Investor room access request: '+f.name.value)+'&body='+encodeURIComponent(b);
-  document.getElementById('sent').hidden=false;});
 })();
 (function(){var k='rgp_notice_v1',d=30*864e5,g=document.getElementById('entry');if(!g)return;
 function rd(){var v=null;try{v=localStorage.getItem(k)}catch(e){}if(!v){try{v=sessionStorage.getItem(k)}catch(e){}}if(!v){var m=document.cookie.match(new RegExp('(?:^|; )'+k+'=([^;]*)'));if(m)v=m[1]}return v&&(Date.now()-Number(v)<d)}
